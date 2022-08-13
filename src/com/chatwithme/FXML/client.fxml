@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" prefHeight="588.0" prefWidth="568.0" stylesheets="@../CSS/Client.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.chatwithme.Controllers.clientController">
+   <children>
+      <Pane layoutX="3.0" layoutY="532.0" prefHeight="47.0" prefWidth="565.0">
+         <children>
+            <ImageView fx:id="sendBtn" fitHeight="30.0" fitWidth="30.0" layoutX="514.0" layoutY="14.0" onMouseReleased="#sendOnMousePressed" preserveRatio="true" styleClass="custom_btn">
+               <image>
+                  <Image url="@../../../assect/img/send.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="msgField" focusColor="#0d0d0d" layoutX="59.0" layoutY="14.0" onKeyReleased="#sendOnEnter" prefHeight="30.0" prefWidth="398.0" unFocusColor="BLACK" />
+            <ImageView fx:id="uploadBtn" fitHeight="30.0" fitWidth="30.0" layoutX="14.0" layoutY="14.0" onMouseReleased="#uploadPhoto" preserveRatio="true" styleClass="custom_btn">
+               <image>
+                  <Image url="@../../../assect/apple-camera.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="464.0" layoutY="16.0" onMouseReleased="#openUpEmojiMenu" styleClass="custom_btn">
+               <image>
+                  <Image url="@../../../assect/external-emoji-emoji-justicon-lineal-color-justicon-3%20(1).png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutY="60.0" prefHeight="472.0" prefWidth="564.0" style="-fx-border-color: green;" styleClass="main-area">
+         <children>
+            <ScrollPane id="scroll-pane" fx:id="scrollPane" layoutX="23.0" layoutY="12.0" prefHeight="446.0" prefWidth="518.0" style="-fx-border-color: green;">
+               <content>
+                  <VBox id="msg-box" fx:id="msgBox" />
+               </content>
+            </ScrollPane>
+         </children>
+      </Pane>
+      <Label layoutX="200.0" layoutY="14.0" text="Live" textFill="#ff2929">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="256.0" layoutY="14.0" text="Chat">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="47.0" fitWidth="68.0" layoutX="153.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../assect/messages-mac.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

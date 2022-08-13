@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="415.0" prefWidth="425.0" styleClass="background" stylesheets="@../CSS/Server.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.chatwithme.Controllers.serverController">
+   <children>
+      <ImageView fitHeight="455.0" fitWidth="425.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../assect/pngtree-live-chat-banner-message-icon-png-image_4713564.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="clientName" alignment="BASELINE_LEFT" focusColor="#87f24d" layoutX="33.0" layoutY="366.0" prefHeight="37.0" prefWidth="268.0" promptText="Your Name" styleClass="text-field" unFocusColor="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></JFXTextField>
+      <Button defaultButton="true" layoutX="317.0" layoutY="370.0" mnemonicParsing="false" onAction="#openUpClient" prefHeight="28.0" prefWidth="87.0" style="-fx-background-color: #02A9EE; -fx-background-radius: 20;" text="Login" textAlignment="CENTER" textFill="#5e0f0f">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Label layoutX="167.0" layoutY="20.0" text="Live" textFill="#ff2929">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="223.0" layoutY="20.0" text="Chat" textFill="#d9d9d9">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
